@@ -65,7 +65,7 @@ public class JmxProxy implements NotificationListener, AutoCloseable {
   private static final String JMX_URL = "service:jmx:rmi:///jndi/rmi://%s:%d/jmxrmi";
   private static final String SS_OBJECT_NAME = "org.apache.cassandra.db:type=StorageService";
   private static final String AES_OBJECT_NAME =
-      "org.apache.cassandra.metrics:type=ThreadPools,scope=AntiEntropyStage";
+      "org.apache.cassandra.metrics:type=ThreadPools,path=internal,scope=AntiEntropyStage";
 
   private final JMXConnector jmxConnector;
   private final ObjectName ssMbeanName;
